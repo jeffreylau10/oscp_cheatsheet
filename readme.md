@@ -21,6 +21,9 @@ gobuster dir -u http://10.11.1.71/ \
   -w /usr/share/seclists/Discovery/Web_Content/cgis.txt \
   -s '200,204,301,302,307,403,500' -e
 
+nikto -host=http://10.11.1.71 -maxtime=30s
+
+
 
 ***
 
