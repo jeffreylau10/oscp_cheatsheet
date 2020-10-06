@@ -17,6 +17,10 @@ $2}'
 for ip in $(cat nmap-scan_10.11.1.1-254 | grep 80 | grep -v "Nmap" |
 awk '{print $2}'); do cutycapt --url=$ip --out=$ip.png;done
 
+gobuster dir -u http://10.11.1.71/ \
+  -w /usr/share/seclists/Discovery/Web_Content/cgis.txt \
+  -s '200,204,301,302,307,403,500' -e
+
 
 ***
 
