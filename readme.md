@@ -22,7 +22,7 @@ gobuster dir -u http://10.11.1.71/ \
   -s '200,204,301,302,307,403,500' -e
 
 nikto -host=http://10.11.1.71 -maxtime=30s
-
+ls -lah /usr/share/nmap/scripts/*shellshock*
 
 
 ***
