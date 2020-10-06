@@ -8,6 +8,16 @@ The following collection is a wild (but structured) selection of commands, snipp
 This cheatsheet is definitely not "complete". I am sure i forgot to write down hundreds of essential commands, used most of them in the wrong way with unnessecary flags and you'll  probably soon ask yourself how i've even made it through the exam. Also you might think a certain tool used should be in another phase of the attack (e.g certain nmap vulnerabitly scripts should be in Exploitation). That's okay, imho the edges between different stages of a penetration test are very blurry. Feel free to issue a PR if you want to help to improve the list.
 **Use for educational purposes only!**
 
+ sudo nmap -A -p80 --open 10.11.1.0/24 -oG nmap-scan_10.11.1.1-254
+  cat nmap-scan_10.11.1.1-254
+  cat nmap-scan_10.11.1.1-254 | grep 80
+  cat nmap-scan_10.11.1.1-254 | grep 80 | grep -v "Nmap"
+  cat nmap-scan_10.11.1.1-254 | grep 80 | grep -v "Nmap" | awk '{print
+$2}'
+for ip in $(cat nmap-scan_10.11.1.1-254 | grep 80 | grep -v "Nmap" |
+awk '{print $2}'); do cutycapt --url=$ip --out=$ip.png;done
+
+
 ***
 
 # Table Of Content
