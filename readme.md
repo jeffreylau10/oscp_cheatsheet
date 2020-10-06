@@ -26,6 +26,7 @@ ls -lah /usr/share/nmap/scripts/*shellshock*
 
 nc -nlvp 1234 (listen on 1234)
 
+python -c 'import pty; pty.spawn("/bin/sh")'
 ***
 
 # Table Of Content
