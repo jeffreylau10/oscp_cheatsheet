@@ -24,6 +24,7 @@ gobuster dir -u http://10.11.1.71/ \
 nikto -host=http://10.11.1.71 -maxtime=30s
 ls -lah /usr/share/nmap/scripts/*shellshock*
 
+nc -nlvp 1234 (listen on 1234)
 
 ***
 
