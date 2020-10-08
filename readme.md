@@ -21,9 +21,7 @@ $2}'
 for ip in $(cat nmap-scan_10.11.1.1-254 | grep 80 | grep -v "Nmap" |
 awk '{print $2}'); do cutycapt --url=$ip --out=$ip.png;done
 
-gobuster dir -u http://10.11.1.71/ \
-  -w /usr/share/seclists/Discovery/Web_Content/cgis.txt \
-  -s '200,204,301,302,307,403,500' -e
+sudo gobuster dir -u http://10.11.1.71/ -w /usr/share/seclists/Discovery/Web-Content/CGIs.txt -s '200,204,301,302,307,403,500' -e
 
 nikto -host=http://10.11.1.71 -maxtime=30s
 ls -lah /usr/share/nmap/scripts/*shellshock*
@@ -170,13 +168,13 @@ autorecon -vv 192.168.0.1
 ### Initial Fast TCP Scan
 
 ```bash
-nmap -v -sS -sV -Pn --top-ports 1000 -oA initial_scan_192.168.0.1 192.168.0.1
+sudo nmap -v -sS -sV -Pn --top-ports 1000 -oA initial_scan_192.168.0.1 192.168.0.1
 ```
 
 ### Full TCP Scan
 
 ```bash
-nmap -v -sS -Pn -sV -p 0-65535 -oA full_scan_192.168.0.1 192.168.0.1
+sudo nmap -v -sS -Pn -sV -p 0-65535 -oA full_scan_192.168.0.1 192.168.0.1
 ```
 
 ### Limited Full TCP Scan
@@ -189,13 +187,13 @@ nmap -sT -p- --min-rate 5000 --max-retries 1 192.168.0.1
 ### Top 100 UDP Scan
 
 ```bash
-nmap -v -sU -T4 -Pn --top-ports 100 -oA top_100_UDP_192.168.0.1 192.168.0.1
+sudo nmap -v -sU -T4 -Pn --top-ports 100 -oA top_100_UDP_192.168.0.1 192.168.0.1
 ```
 
 ### Full Vulnerability scan
 
 ```bash
-nmap -v -sS  -Pn --script vuln --script-args=unsafe=1 -oA full_vuln_scan_192.168.0.1 192.168.0.1
+sudo nmap -v -sS  -Pn --script vuln --script-args=unsafe=1 -oA full_vuln_scan_192.168.0.1 192.168.0.1
 ```
 
 ### Vulners Vulnerability Script
