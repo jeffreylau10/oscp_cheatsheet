@@ -34,6 +34,8 @@ python -c 'import pty; pty.spawn("/bin/sh")'
 ***
 wmic service get name,pathname,displayname,startmode | findstr /i auto | findstr /i /v "C:\Windows\\" | findstr /i /v """
 
+meterpreter post/multi/recon/local_exploit_suggester 
+
 # Table Of Content
 - [OSCP Cheatsheet](#oscp-cheatsheet)
   * [Disclaimer](#disclaimer)
