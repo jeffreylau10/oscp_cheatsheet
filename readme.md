@@ -45,6 +45,8 @@ mimikatz_command -f samdump::hashes
 basic webshell
 /usr/share/webshells
 
+active directory recon - https://book.hacktricks.xyz/windows/active-directory-methodology
+
 # Table Of Content
 - [OSCP Cheatsheet](#oscp-cheatsheet)
   * [Disclaimer](#disclaimer)
