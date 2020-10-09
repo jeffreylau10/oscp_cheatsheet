@@ -46,6 +46,7 @@ basic webshell
 /usr/share/webshells
 
 active directory recon - https://book.hacktricks.xyz/windows/active-directory-methodology
+smb enum check list https://0xdf.gitlab.io/2018/12/02/pwk-notes-smb-enumeration-checklist-update1.html
 
 # Table Of Content
 - [OSCP Cheatsheet](#oscp-cheatsheet)
