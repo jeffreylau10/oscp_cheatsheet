@@ -42,6 +42,9 @@ use mimikatz
 msv
 mimikatz_command -f samdump::hashes
 
+nmap -T4 -Pn -sV -F -sC -oN Bastard.nmap 10.11.1.50
+
+
 basic webshell
 /usr/share/webshells
 
