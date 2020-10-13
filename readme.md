@@ -7,7 +7,7 @@ The following collection is a wild (but structured) selection of commands, snipp
 gcc -m32 -Wl,--hash-style=both -o exploit 18411.c 
 Standalone GCC compiler (If machine does not have GCC)
 chmod (file) 	- 	change file perms to be able to execute
-
+socat TCP-LISTEN:51000,fork,reuseaddr OPENSSL:remotehost:51000,cafile=certificate.pem,verify=0
 
 Mingw:
  i686-w64-mingw32- gcc(g++) exploit.c -o exploit -lws2_32
