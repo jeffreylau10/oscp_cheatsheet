@@ -1,3 +1,6 @@
+sed -i 's/\r//' filename
+
+
 echo $username = "alice" > startprocess.ps1
 echo $password = "aliceishere" >> startprocess.ps1
 echo $securePassword = ConvertTo-SecureString $password -AsPlainText -Force >> startprocess.ps1
