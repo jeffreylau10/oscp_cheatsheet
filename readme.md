@@ -1,5 +1,7 @@
 sed -i 's/\r//' filename
 
+find SUID binaries
+find / -perm -u=s -type f 2>/dev/null
 
 echo $username = "alice" > startprocess.ps1
 echo $password = "aliceishere" >> startprocess.ps1
