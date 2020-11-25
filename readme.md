@@ -1,5 +1,7 @@
 sed -i 's/\r//' filename
 
+qemu-img convert -f vdi -O vmdk VulnOSv2.vdi VulnOSv2.vmdk
+
 find SUID binaries
 find / -perm -u=s -type f 2>/dev/null (SUID3ENUM)
 
