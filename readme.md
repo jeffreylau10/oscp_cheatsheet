@@ -1,6 +1,7 @@
 sed -i 's/\r//' filename
 
 proxytunnel -p 10.0.1.114:3128 -d 127.0.0.1:22 -a 4444
+ssh john@127.0.0.1 -p 4444  "/bin/sh"
 
 qemu-img convert -f vdi -O vmdk VulnOSv2.vdi VulnOSv2.vmdk
 
