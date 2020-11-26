@@ -1,3 +1,5 @@
+sql injection bypass user='*' and password='*'
+
 sed -i 's/\r//' filename
 
 proxytunnel -p 10.0.1.114:3128 -d 127.0.0.1:22 -a 4444
