@@ -67,6 +67,9 @@ for ip in $(cat nmap-scan_10.11.1.1-254 | grep 80 | grep -v "Nmap" |
 awk '{print $2}'); do cutycapt --url=$ip --out=$ip.png;done
 
 sudo gobuster dir -u http://10.11.1.71/ -w /usr/share/seclists/Discovery/Web-Content/CGIs.txt -s '200,204,301,302,307,403,500' -e -k
+for files
+-x php,txt,cnf,conf
+
 sudo gobuster dir -e -u http://192.168.0.1 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 20 -s '200,204,301,302,307,403,500' -k
 
 nikto -host=http://10.11.1.71 -maxtime=30s
