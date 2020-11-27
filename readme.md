@@ -1,4 +1,5 @@
 ./windows-exploit-suggester.py --database 2019-03-17-mssb.xls --systeminfo /root/sandbox/sys_info_xp.txt
+firefart:fib/tLwcEGsC2:0:0:pwned:/root:/bin/bash
 
 windows/meterpreter/reverse_tcp_allports
 
