@@ -1,3 +1,9 @@
+Linux version /proc/version
+
+
+
+
+
 Undelete files
 grep –binary-files=text –context=100 'root' /dev/sdb > /tmp/root.txt
 
