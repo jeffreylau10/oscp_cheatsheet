@@ -1,5 +1,5 @@
 Linux version /proc/version
-
+Find SSH keys in /home/[user]/.ssh/
 
 
 
