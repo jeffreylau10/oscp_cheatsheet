@@ -1,7 +1,7 @@
 Linux version /proc/version
 Find SSH keys in /home/[user]/.ssh/
 
-
+Basic Linux PE - https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
 
 
 Undelete files
