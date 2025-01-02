@@ -93,6 +93,9 @@ sudo gobuster dir -u http://10.11.1.71/ -w /usr/share/seclists/Discovery/Web-Con
 for files
 -x php,txt,cnf,conf
 
+gobuster dir -u http://example.com -w /usr/share/wordlists/dirb/common.txt -x html
+
+
 sudo gobuster dir -e -u http://192.168.0.1 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 20 -s '200,204,301,302,307,403,500' -k
 
 nikto -host=http://10.11.1.71 -maxtime=30s
